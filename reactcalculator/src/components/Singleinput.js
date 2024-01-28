@@ -46,26 +46,43 @@ function Singleinput() {
   } 
  
   return ( 
-    <div className="App"> 
-      <div> 
-        <h1>Simplest Working Calculator</h1> 
-      </div> 
-      <form> 
-        <p ref={resultRef}>{result}</p> 
-        <input 
-          pattern="[0-9]" 
-          ref={inputRef} 
-          type="number" 
-          placeholder="Type a number" 
-        /> 
-        <button onClick={plus}>add</button> 
-        <button onClick={minus}>subtract</button> 
-        <button onClick={times}>multiply</button> 
-        <button onClick={divide}>divide</button> 
-        <button onClick={resetInput}>reset input</button> 
-        <button onClick={resetResult}>reset result</button> 
-      </form> 
-    </div> 
+    
+      <div className="p-4 bg-gray-200">
+        <div>
+          <h1 className="text-2xl font-bold">Simplest Working Calculator</h1>
+        </div>
+  
+        <form className="mt-4">
+          <p ref={resultRef} className="mb-2 text-xl font-bold">
+            {result}
+          </p>
+          <input
+            pattern="[0-9]"
+            ref={inputRef}
+            type="number"
+            placeholder="Type a number"
+            className="p-2 border mb-4"
+          />
+          <button onClick={plus} className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out">
+            Add
+          </button>
+          <button onClick={minus} className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out">
+            Subtract
+          </button>
+          <button onClick={times} className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out">
+            Multiply
+          </button>
+          <button onClick={divide} className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out">
+            Divide
+          </button>
+          <button onClick={resetInput} className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 mr-2 transition duration-300 ease-in-out">
+            Reset Input
+          </button>
+          <button onClick={resetResult} className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 transition duration-300 ease-in-out">
+            Reset Result
+          </button>
+        </form>
+      </div>
   ); 
 } 
  

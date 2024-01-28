@@ -54,33 +54,58 @@ function Doubleinput() {
 
   return (
     <>
-      <div>
-        <h1>Simple Calculator</h1>
-      </div>
-      <form>
-        <p ref={resultRef}>Add Result: {result}</p>
-        <p>Subtract Result: {subResult}</p>
+          <div className="p-4 bg-gray-200">
+      <h1 className="text-2xl font-bold">Simple Calculator</h1>
+
+      <form className="mt-4">
+        <p ref={resultRef} className="mb-2">
+          Add Result: {result}
+        </p>
+        <p className="mb-4">Subtract Result: {subResult}</p>
+
         <input
           pattern="[0-9]"
           ref={firstInputRef}
           type="number"
           placeholder="Enter the first number"
+          className="p-2 border mb-2"
         />
         <input
           pattern="[0-9]"
           ref={secondInputRef}
-          disabled={!firstRender} 
+          disabled={!firstRender}
           type="number"
           placeholder="Enter the second number"
+          className="p-2 border mb-2"
         />
-        <button onClick={add}>Add</button>
-        <button onClick={subtract}>Subtract</button>
-       
-       
-        <button onClick={resetInputs}>Reset Inputs</button>
-        <button onClick={resetResult}>Reset Result</button>
+
+        <button
+          onClick={add}
+          className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out"
+        >
+          Add
+        </button>
+        <button
+          onClick={subtract}
+          className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 mr-2 transition duration-300 ease-in-out"
+        >
+          Subtract
+        </button>
+
+        <button
+          onClick={resetInputs}
+          className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 mr-2 transition duration-300 ease-in-out"
+        >
+          Reset Inputs
+        </button>
+        <button
+          onClick={resetResult}
+          className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 transition duration-300 ease-in-out"
+        >
+          Reset Result
+        </button>
       </form>
-    
+    </div>
     </>
   );
 }
