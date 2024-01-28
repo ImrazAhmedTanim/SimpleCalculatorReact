@@ -54,7 +54,7 @@ function Doubleinput() {
 
   return (
     <>
-          <div className="p-4 bg-gray-200">
+          <div className="p-4 mb-8 bg-gray-200">
       <h1 className="text-2xl font-bold">Simple Calculator</h1>
 
       <form className="mt-4">

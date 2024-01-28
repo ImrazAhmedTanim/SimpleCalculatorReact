@@ -47,7 +47,7 @@ function Singleinput() {
  
   return ( 
     
-      <div className="p-4 bg-gray-200">
+      <div className="p-4 mb-8 bg-gray-200">
         <div>
           <h1 className="text-2xl font-bold">Simplest Working Calculator</h1>
         </div>
